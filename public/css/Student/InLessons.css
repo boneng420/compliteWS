@@ -1,0 +1,202 @@
+:root {
+    /* Background Colors */
+    --bg-dark: #0D4DD6;
+    --bg-light: #FFFFFF;
+    --bg-secondary: #F2F2F2;
+
+    /* Text Colors */
+    --text-white: #FFFFFF;
+    --text-gray: #7F7F7F;
+    --text-dark: #333333;
+
+    /* Primary Color Palette */
+    --primary-color: #0D4DD6;
+    --primary-color-light: #3498DB;
+    --primary-color-dark: #084592;
+
+    /* Secondary Colors */
+    --secondary-color: #F2C94C;
+    --secondary-color-light: #FCE588;
+    --secondary-color-dark: #C09C25;
+
+    /* Accent Colors */
+    --accent-color: #F27A7A;
+    --accent-color-light: #F7B3B3;
+    --accent-color-dark: #C14444;
+
+    /* Navigation Colors */
+    --nav-bg: #0D4DD6;
+    --nav-link-hover: #3498DB;
+
+    /* Button Colors */
+    --btn-primary-bg: #0D4DD6;
+    --btn-primary-hover: #084592;
+
+    /* Lesson Section Colors */
+    --lesson-bg: #FFFFFF;
+    --lesson-text: #333333;
+    --lesson-border: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+    color: var(--text-white);
+    line-height: 26px;
+    margin-top: 100px;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navigation Styles */
+.header-bottom {
+    background-color: var(--nav-bg);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Oxanium', cursive;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--primary-color-light);
+}
+
+.navbar {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--nav-link-hover);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Lesson section styles */
+.lesson {
+    max-width: 1200px;
+    margin: 32px auto;
+    background-color: var(--lesson-bg);
+    color: var(--lesson-text);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.186);
+}
+
+.lesson h1 {
+    margin-bottom: 24px;
+}
+
+ul{
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.p1 {
+    margin-bottom: 24px;
+}
+
+.content1 {
+    margin-top: 32px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row.reverse {
+    flex-direction: row-reverse;
+}
+
+.lesson-image {
+    flex-basis: 40%;
+}
+
+.lesson-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.lesson-text {
+    flex-basis: 60%;
+}
+
+.p2, .p3 {
+    margin-bottom: 16px;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+
+.btn-wrapper button {
+    background-color: var(--btn-primary-bg);
+    color: var(--text-white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-wrapper button:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+/* Footer styles */
+footer {
+    background-color: #FFFF2F;
+    padding: 16px;
+    text-align: center;
+    color: var(--text-gray);
+}
